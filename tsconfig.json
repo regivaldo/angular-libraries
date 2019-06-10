@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "simple-gtm": [
+        "dist/simple-gtm"
+      ],
+      "simple-gtm/*": [
+        "dist/simple-gtm/*"
+      ]
+    }
   }
 }
