@@ -48,7 +48,6 @@
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6",
-    "easily-gtm": "./dist/easily-gtm/easily-gtm-1.0.0.tgz"
+    "typescript": "~3.1.6"
   }
 }
