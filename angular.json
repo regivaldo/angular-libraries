@@ -130,33 +130,33 @@
         }
       }
     },
-    "simple-gtm": {
-      "root": "projects/simple-gtm",
-      "sourceRoot": "projects/simple-gtm/src",
+    "easily-gtm": {
+      "root": "projects/easily-gtm",
+      "sourceRoot": "projects/easily-gtm/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/simple-gtm/tsconfig.lib.json",
-            "project": "projects/simple-gtm/ng-package.json"
+            "tsConfig": "projects/easily-gtm/tsconfig.lib.json",
+            "project": "projects/easily-gtm/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/simple-gtm/src/test.ts",
-            "tsConfig": "projects/simple-gtm/tsconfig.spec.json",
-            "karmaConfig": "projects/simple-gtm/karma.conf.js"
+            "main": "projects/easily-gtm/src/test.ts",
+            "tsConfig": "projects/easily-gtm/tsconfig.spec.json",
+            "karmaConfig": "projects/easily-gtm/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/simple-gtm/tsconfig.lib.json",
-              "projects/simple-gtm/tsconfig.spec.json"
+              "projects/easily-gtm/tsconfig.lib.json",
+              "projects/easily-gtm/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

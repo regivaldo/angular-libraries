@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-lib": "ng-packagr -p projects/simple-gtm/package.json && cd dist/simple-gtm && npm pack"
+    "build-lib": "ng-packagr -p projects/easily-gtm/package.json && cd dist/easily-gtm && npm pack"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +49,6 @@
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6",
-    "simple-gtm": "./dist/simple-gtm/simple-gtm-1.0.0.tgz"
+    "easily-gtm": "./dist/easily-gtm/easily-gtm-1.0.0.tgz"
   }
 }

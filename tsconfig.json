@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "simple-gtm": [
-        "dist/simple-gtm"
+      "easily-gtm": [
+        "dist/easily-gtm"
       ],
-      "simple-gtm/*": [
-        "dist/simple-gtm/*"
+      "easily-gtm/*": [
+        "dist/easily-gtm/*"
       ]
     }
   }

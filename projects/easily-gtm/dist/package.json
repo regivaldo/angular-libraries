@@ -1,0 +1,21 @@
+{
+  "name": "easily-gtm",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0"
+  },
+  "main": "bundles/easily-gtm.umd.js",
+  "module": "fesm5/easily-gtm.js",
+  "es2015": "fesm2015/easily-gtm.js",
+  "esm5": "esm5/easily-gtm.js",
+  "esm2015": "esm2015/easily-gtm.js",
+  "fesm5": "fesm5/easily-gtm.js",
+  "fesm2015": "fesm2015/easily-gtm.js",
+  "typings": "easily-gtm.d.ts",
+  "metadata": "easily-gtm.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SimpleGtmService } from 'projects/simple-gtm/src/public_api';
+import { EasilyGtmService } from 'projects/easily-gtm/src/public_api';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +11,14 @@ export class AppComponent implements OnInit {
 
   /**
    * Constructor
-   * @param sgtm of SimpleGtmService
+   * @param egtm of EasilyGtmService
    */
-  constructor(private sgtm: SimpleGtmService) {}
+  constructor(private egtm: EasilyGtmService) {}
 
   /**
    * Test of service
    */
   ngOnInit() {
-    this.sgtm.push('vpageview', {'page': '/teste'});
+    this.egtm.push('vpageview', {'page': '/teste'});
   }
 }
