@@ -1,0 +1,21 @@
+{
+  "name": "simple-gtm",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0"
+  },
+  "main": "bundles/simple-gtm.umd.js",
+  "module": "fesm5/simple-gtm.js",
+  "es2015": "fesm2015/simple-gtm.js",
+  "esm5": "esm5/simple-gtm.js",
+  "esm2015": "esm2015/simple-gtm.js",
+  "fesm5": "fesm5/simple-gtm.js",
+  "fesm2015": "fesm2015/simple-gtm.js",
+  "typings": "simple-gtm.d.ts",
+  "metadata": "simple-gtm.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
