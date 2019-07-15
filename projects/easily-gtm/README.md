@@ -6,20 +6,82 @@ Simple GTM library for Angular 7+
 ![version](https://img.shields.io/github/package-json/v/regivaldo/angular-libraries.svg)
 [![angular](https://img.shields.io/github/package-json/dependency-version/regivaldo/angular-libraries/dev/@angular/cli.svg)](https://angular.io)
 
-## Using
-1. Run `npm install easily-gtm --save-dev`
-1. Create a attribute on environment config:
+## Install
+* Run `npm install easily-gtm --save-dev`
+* Create a attribute on environment config:
+
 ```typescript
 export const environment = {
   production: false,
   tagManagerId: 'GTM-XXXXXXX',
 };
 ```
-3. Import on main.js: 
+
+* Import on **main.js**:
+
 ```typescript
 import { EasilyGtmService } from 'easily-gtm/easily-gtm.service';
 ```
-4. Implement function create script on `<header>` and `<body>`:
+
+* Implement function generate on `<header>` and `<body>`:
+> This function create the script and no-script tags.
+
 ```typescript
 EasilyGtmService.generate(environment.tagManagerId);
+```
+
+## Using
+This library has one function only: **push**
+
+* Import the library
+
+```typescript
+import { EasilyGtmService } from 'easily-gtm/easily-gtm.service';
+```
+
+* Include on components' constructor
+```typescript
+constructor(private egtm: EasilyGtmService) {}
+```
+
+* Use the method:
+
+```typescript
+this.egtm.push('vpageview', {'page': '/teste'});
+```
+
+The mothod has two params: **event**, **params**:
+
+### Event
+This attribute is a String and receive the event.
+
+> Example: vpageview, ga-event, ga-exception
+
+### Params
+This attribute is a object with this format:
+
+```json
+{
+  'page': 'value'
+}
+```
+
+or
+
+```json
+{
+  'category': 'your category',
+  'action': 'your action',
+  'label': 'your label'
+}
+```
+
+or
+
+```json
+{
+  'category': 'your category',
+  'action': 'your action',
+  'value': 'your value'
+}
 ```
