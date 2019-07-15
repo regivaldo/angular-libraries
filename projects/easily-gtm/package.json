@@ -1,6 +1,6 @@
 {
   "name": "easily-gtm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": ["Google Analytics, Google Tag manager"],
   "peerDependencies": {
     "@angular/common": "^7.1.0",
