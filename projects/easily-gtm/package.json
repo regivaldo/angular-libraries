@@ -1,7 +1,20 @@
 {
   "name": "easily-gtm",
-  "version": "1.0.3",
-  "keywords": ["Google Analytics, Google Tag manager"],
+  "version": "1.0.4",
+  "license": "MIT",
+  "description": "Easily library to Google Tag Manager by Angular 5+",
+  "keywords": [
+    "Angular",
+    "Google Analytics",
+    "Google Tag manager"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:regivaldo/angular-libraries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/regivaldo/angular-libraries/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"

@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "build-lib": "ng-packagr -p projects/easily-gtm/package.json && cd dist/easily-gtm && npm pack"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",
