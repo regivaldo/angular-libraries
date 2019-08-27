@@ -3,7 +3,7 @@ Simple GTM library for Angular 7+
 
 [![Open issues](https://img.shields.io/github/issues-raw/regivaldo/angular-libraries.svg)](https://github.com/regivaldo/angular-libraries/issues)
 ![licence](https://img.shields.io/npm/l/angular-libraries.svg)
-![version](https://img.shields.io/github/package-json/v/regivaldo/angular-libraries.svg)
+![version](https://img.shields.io/github/package-json/v/regivaldo/angular-libraries/projects/easily-gtm.svg)
 [![angular](https://img.shields.io/github/package-json/dependency-version/regivaldo/angular-libraries/dev/@angular/cli.svg)](https://angular.io)
 
 ## Install
