@@ -40,7 +40,7 @@ jobs:
       run: cp -r LICENSE dist/easily-gtm
 
     - name: Deploy
-      run: cd dist/ugla/ && npm publish
+      run: cd dist/easily-gtm/ && npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -50,5 +50,5 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          Ugla was deployed on npmjs by {{ repo.namespace }}
+          <b>Easily GTM</b> was deployed on npmjs by {{ repo.namespace }}
           New version is ${{ steps.package-version.outputs.version }}
