@@ -30,19 +30,25 @@ jobs:
         node-version: 14
         registry-url: https://registry.npmjs.org/
 
-    - name: Install dependencies
-      run: npm i
+    # - name: Install dependencies
+    #   run: npm i
       
-    - name: Build library
-      run: node_modules/.bin/ng build --project=easily-gtm --prod
+    # - name: Build library
+    #   run: node_modules/.bin/ng build --project=easily-gtm --prod
   
-    - name: Move LICENSE
-      run: cp -r LICENSE dist/easily-gtm
+    # - name: Move LICENSE
+    #   run: cp -r LICENSE dist/easily-gtm
 
     - name: Deploy
       run: cd dist/easily-gtm/ && npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+    - name: Read package.json
+      uses: tyankatsu0105/read-package-version-actions@v1
+      with: 
+        path: "projects/easily-gtm/"
+      id: package-version
 
     - name: Send message Telegram
       uses: appleboy/telegram-action@master
@@ -50,5 +56,5 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          <b>Easily GTM</b> was deployed on npmjs by {{ repo.namespace }}
+          Easily GTM was deployed on npmjs by {{ repo.namespace }}
           New version is ${{ steps.package-version.outputs.version }}
