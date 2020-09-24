@@ -1,0 +1,40 @@
+name: Deploy Easily GTM
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache node modules
+      uses: actions/cache@v1
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: |
+          ~/.npm
+          node_modules/
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+    
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14
+        registry-url: https://registry.npmjs.org/
+
+    - name: Install dependencies
+      run: npm i
+      
+    - name: Build library
+      run: node_modules/.bin/ng build --project=easily-gtm --prod
+  
+    - name: Move LICENSE
+      run: cp -r LICENSE dist/easily-gtm
